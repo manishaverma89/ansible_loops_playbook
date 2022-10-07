@@ -1,0 +1,11 @@
+--- # My Loops Playbook creating users
+- hosts: localhost
+  user: root
+  tasks:
+          - name: Add list of users 
+            user: name='{{item}}' state=present
+            with_items:
+                  - manisha_verma
+                  - bhavya_verma
+                  - prince_verma
+                  - harsh_verma
