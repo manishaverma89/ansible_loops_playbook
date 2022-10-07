@@ -1,0 +1,10 @@
+---
+
+- name: Run the test playbook
+  gather_facts: false
+  hosts: 34.131.38.19
+  tasks:
+    - name: Get the username running this playbook
+      become: false
+      local_action: command whoami
+      register: username_on_the_host
