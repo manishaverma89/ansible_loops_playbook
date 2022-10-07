@@ -1,6 +1,6 @@
 --- # My Loops Playbook creating users
 - hosts: localhost
-  user: root
+  
   tasks:
           - name: Add list of users 
             user: name='{{item}}' state=present
